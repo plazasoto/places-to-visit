@@ -1,12 +1,17 @@
 <template>
     <div>
         <label for="place-select">Selecciona un lugar</label>
+<!--    <select v-model="selectedPlace" id="place-select">
+            <option v-for="place in places" :key="place.cca3" :value="place.name.common">
+                {{ place.name.common }}
+            </option>
+        </select> -->
         <select v-model="selectedPlace" id="place-select">
-            <option v-for="place in places" :key="place.name" :value="place.name">
-              {{ place.name }}
+            <option v-for="place in places" :key="place.cca3" :value="place.name.common">
+              {{ place.name.common }}
             </option>
         </select>
-        <button @click="addPlace">Añadir un lugar</button>
+        <button @click="addPlaces">Añadir un lugar</button>
     </div>
   </template>
   
